@@ -24,7 +24,7 @@ async function searchImage () {keyword
         imageLink.target = "_blank";  
         
         imageLink.appendChild(image);
-
+        searchResult.appendChild(imageLink)
     })
     
 }
