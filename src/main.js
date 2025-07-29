@@ -15,6 +15,9 @@ async function searchImage () {keyword
 
     const response = await fetch(url);
     const data = await response.json();
+    if(page === 1){
+        searchResult.innerHTML = ""   
+    }
     const results = data.results;
     results.map((result) => {
         const image = document.createElement("img")
@@ -40,4 +43,5 @@ searchForm.addEventListener('submit', (e) => {
 
 showMoreBtn.addEventListener("click", (e)=> {
     page++;
+    searchImage()
 })
