@@ -27,7 +27,7 @@ async function searchImage () {keyword
         searchResult.appendChild(imageLink)
     })
     showMoreBtn.style.display = "block";
-    
+
 
     
 }
@@ -36,4 +36,8 @@ searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
     page = 1;
     searchImage();
+})
+
+showMoreBtn.addEventListener("click", (e)=> {
+    page++;
 })
