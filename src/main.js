@@ -20,7 +20,11 @@ async function searchImage () {keyword
         const image = document.createElement("img")
         image.src = result.urls.small;   
         const imageLink = document.createElement('a')
-        imageLink.href = result.link.html;        
+        imageLink.href = result.link.html;  
+        imageLink.target = "_blank";  
+        
+        imageLink.appendChild(image);
+
     })
     
 }
