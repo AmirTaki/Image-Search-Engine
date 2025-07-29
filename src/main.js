@@ -15,6 +15,8 @@ async function searchImage () {keyword
 
     const response = await fetch(url);
     const data = await response.json();
+    const result = data.results;
+    
     
 }
 
