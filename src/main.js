@@ -17,3 +17,9 @@ async function searchImage () {keyword
     const data = await response.json();
     
 }
+
+searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    page = 1;
+    searchImage();
+})
