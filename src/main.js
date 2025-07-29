@@ -1,3 +1,4 @@
+const accessKey = "api";
 const  searchForm = document.getElementById("serach-form")
 const  searchBox = document.getElementById("serach-box")
 const  searchResult = document.getElementById("search-result")
@@ -10,5 +11,6 @@ let keyword = ""
 let page = 1;
 async function searchImage () {keyword
     keyword = searchBox.value;
-    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}`
+    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}$client_id=${accessKey}`;
+
 }
