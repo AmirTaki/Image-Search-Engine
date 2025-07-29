@@ -1,6 +1,6 @@
-const accessKey = "api";
+const accessKey = "U2NIZZXVpPJJOTf9P-HpD5S3zVp-gmIVORuptpLQg6U";
 const  searchForm = document.getElementById("serach-form")
-const  searchBox = document.getElementById("serach-box")
+const  searchBox = document.getElementById("search-box")
 const  searchResult = document.getElementById("search-result")
 const  showMoreBtn = document.getElementById("show-more-btn")
 // Link: <>; rel="first", <https://api.unsplash.com/search/photos?page=1&query=office>; rel="prev", <https://api.unsplash.com/search/photos?page=3&query=office>; rel="last", <https://api.unsplash.com/search/photos?page=3&query=office>; rel="next"
@@ -9,9 +9,10 @@ const  showMoreBtn = document.getElementById("show-more-btn")
 
 let keyword = ""
 let page = 1;
-async function searchImage () {keyword
+async function searchImage () {
     keyword = searchBox.value;
-    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}$client_id=${accessKey}&per_page=12`;
+    const url =  `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`;
+    // const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}$client_id=${accessKey}&per_page=12`;
 
     const response = await fetch(url);
     const data = await response.json();
@@ -23,7 +24,7 @@ async function searchImage () {keyword
         const image = document.createElement("img")
         image.src = result.urls.small;   
         const imageLink = document.createElement('a')
-        imageLink.href = result.link.html;  
+        // imageLink.href = result.link.html;  
         imageLink.target = "_blank";  
         
         imageLink.appendChild(image);
