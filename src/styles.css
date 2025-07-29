@@ -4,3 +4,8 @@
     font-family: "Poopins", sans-serif;
     box-sizing: border-box
 }
+
+body{
+    background-color: #39297d;
+    color: #fff;
+}
